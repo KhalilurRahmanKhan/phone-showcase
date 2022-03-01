@@ -18,7 +18,8 @@ const getSearchInput = () => {
 const loadPhones = phones => {
     const showcase = document.getElementById("showcase");
     showcase.textContent = "";
-    
+    details.textContent = "";
+
     if(phones.length == 0){
         const h4 = document.createElement('h4');
         h4.innerText = "No data found" ;
@@ -84,7 +85,7 @@ const loadDetails = data => {
     const div = document.createElement('div');
     div.classList.add("details");
     div.innerHTML = `
-    <img class="d-block mx-auto mb-4" src="${data.data.image}" alt="" width="250" height="250">
+    <img class="d-block mx-auto mb-4" src="${data.data.image}" alt="" width="40%" height="300">
     <h4 class="">${data.data.name}</h4>
     <p><b>Release date</b>: ${data.data.releaseDate ? data.data.releaseDate : "Release date not found" }</p>
     <ul>
@@ -93,8 +94,8 @@ const loadDetails = data => {
         <li><b>Chipset</b>: ${data.data.mainFeatures.chipSet}</li>
         <li><b>Memory</b>: ${data.data.mainFeatures.memory}</li>
     </ul>
-    <p><b>Sensors</b>: ${data.data.mainFeatures.sensors}</p>
-    <div style="border:1px solid grey; width:70%; margin:auto; background-color:grey;color:white;">
+    <p style="font-size:14px;"><b>Sensors</b>:${data.data.mainFeatures.sensors}</p>
+    <div style="width:80%; margin:auto; background-color:grey;color:white; padding:5px;">
     <ul>
         <li><b>WLAN</b>: ${data.data.others.WLAN}</li>
         <li><b>Bluetooth</b>: ${data.data.others.Bluetooth}</li>

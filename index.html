@@ -16,7 +16,6 @@
             font-size: 18px;
         }
         .details{
-            border: 1px solid rgb(87, 80, 80);
             padding: 30px;
             width: 75%;
             margin: 30px auto;
@@ -27,6 +26,20 @@
         p{
             margin: 15px;
         }
+        
+        @media only screen and (max-width: 600px) {
+            body{
+                font-size: 14px;
+            }
+            ::placeholder{
+                font-size: 10px;
+            }
+            .search::placeholder{
+            color: red;
+            font-size: 11px;
+
+        }
+        }
     </style>
 
 </head>
@@ -35,7 +48,7 @@
     <div class="container mt-3">
         <h1 class="text-center mb-3">Phone Showcase</h1>
         <div class="input-group mb-3 w-50 mx-auto">
-            <input type="text" class="form-control " placeholder="Enter phone's brand name" id="search">
+            <input type="text" class="form-control " placeholder="Enter phone's name" id="search">
             <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="getSearchInput()">Search</button>
             
         </div>
@@ -44,7 +57,7 @@
         </div>
         
 
-        <div class="row w-75 mx-auto " id="showcase">  
+        <div class="row w-75 mx-auto text-center" id="showcase">  
         </div>
 
         </div>
