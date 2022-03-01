@@ -9,11 +9,9 @@ const getSearchInput = () => {
     else{
         document.getElementById("search").classList.add("search");
     }
-
-   
-
     document.getElementById("search").value = "";
 }
+
 
 const loadPhones = phones => {
     const showcase = document.getElementById("showcase");
@@ -97,12 +95,12 @@ const loadDetails = data => {
     <p style="font-size:14px;"><b>Sensors</b>:${data.data.mainFeatures.sensors}</p>
     <div style="width:80%; margin:auto; background-color:grey;color:white; padding:5px;">
     <ul>
-        <li><b>WLAN</b>: ${data.data.others.WLAN}</li>
-        <li><b>Bluetooth</b>: ${data.data.others.Bluetooth}</li>
-        <li><b>GPS</b>: ${data.data.others.GPS}</li>
-        <li><b>NFC</b>: ${data.data.others.NFC}</li>
-        <li><b>Radio</b>: ${data.data.others.Radio}</li>
-        <li><b>USB</b>: ${data.data.others.USB}</li>
+        <li><b>WLAN</b>: ${data.data.others ? data.data.others.WLAN : "No data found" }</li>
+        <li><b>Bluetooth</b>: ${data.data.others ? data.data.others.Bluetooth : "No data found" }</li>
+        <li><b>GPS</b>: ${data.data.others ? data.data.others.GPS : "No data found" }</li>
+        <li><b>NFC</b>: ${data.data.others ? data.data.others.NFC : "No data found" }</li>
+        <li><b>Radio</b>: ${data.data.others ? data.data.others.Radio : "No data found" }</li>
+        <li><b>USB</b>: ${data.data.others ? data.data.others.USB : "No data found" }</li>
     </ul>
     </div>
     `;

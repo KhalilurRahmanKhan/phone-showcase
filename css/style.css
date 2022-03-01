@@ -1,0 +1,30 @@
+
+.search::placeholder{
+    color: red;
+    font-size: 18px;
+}
+.details{
+    padding: 30px;
+    width: 75%;
+    margin: 30px auto;
+}
+ul {
+    list-style: none;
+}
+p{
+    margin: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        font-size: 14px;
+    }
+    ::placeholder{
+        font-size: 10px;
+    }
+    .search::placeholder{
+    color: red;
+    font-size: 11px;
+
+}
+}
