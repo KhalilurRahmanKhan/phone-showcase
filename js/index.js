@@ -31,7 +31,7 @@ const loadPhones = phones => {
             div.classList.add("col-md-4");
             div.innerHTML = `
             <div class="card" style="width: 18rem;">
-                <img src="${phone.image}" class="card-img-top" style="padding:0px 10px; height:220px">
+                <img src="${phone.image}" class="card-img-top" style="padding:0px 10px; width:80%; margin:auto; height:220px">
                 <div class="card-body">
                 <h5 class="card-title">${phone.brand}</h5>
                 <p class="card-text">${phone.phone_name}</p>
@@ -50,7 +50,7 @@ const loadPhones = phones => {
                 div.classList.add("col-md-4");
                 div.innerHTML = `
                 <div class="card" style="width: 18rem;">
-                    <img src="${phones[i].image}" class="card-img-top" style="padding:0px 10px; height:220px">
+                    <img src="${phones[i].image}" class="card-img-top" style="padding:0px 10px; width:80%; margin:auto; height:220px">
                     <div class="card-body">
                     <h5 class="card-title">${phones[i].brand}</h5>
                     <p class="card-text">${phones[i].phone_name}</p>
@@ -94,7 +94,7 @@ const loadDetails = data => {
         <li><b>Memory</b>: ${data.data.mainFeatures.memory}</li>
     </ul>
     <p><b>Sensors</b>: ${data.data.mainFeatures.sensors}</p>
-    <div style="border:1px solid grey; width:70%; margin:auto;"><b>Others</b>:
+    <div style="border:1px solid grey; width:70%; margin:auto; background-color:grey;color:white;">
     <ul>
         <li><b>WLAN</b>: ${data.data.others.WLAN}</li>
         <li><b>Bluetooth</b>: ${data.data.others.Bluetooth}</li>
